@@ -1,0 +1,17 @@
+A simple Groovy script to download today's edition of The Guardian (or Observer on Sunday) and attach it to an email sent to your Kindle.
+
+This uses the electroninc version of the newspaper kindly provided by Mark Longair, http://mythic-beasts.com/~mark/random/guardian-for-kindle/
+
+Requires version of groovy 1.7 or above - this is available in the repositories on Ubuntu 11.04 and Arch Linux, or can be manually download from http://groovy.codehaus.org
+
+The script has a few settings near the top to be filled in, replace XXXX with your own details and remember to register the 'from' email address on the Amazon website.
+
+After giving the script execute permissions it can be run as a normal shell script:
+./KindleGuardian.groovy
+
+or add it to your crontab for daily delivery:
+crontab -e
+
+then add an entry like this to run it at 7:30am every day:
+30 07 * * * /home/username/stuff/KindleGuardian.groovy >/dev/null 2>&1
+
