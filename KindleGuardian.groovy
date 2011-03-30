@@ -62,7 +62,7 @@ def session = Session.getDefaultInstance(props, auth)
 def multipart = new MimeMultipart()
 multipart.addBodyPart(new MimeBodyPart(text: bodyText))
 multipart.addBodyPart(new MimeBodyPart(fileName: filename,
-									   dataHandler: new DataHandler(new URLDataSource(fileUrl) {
+                                       dataHandler: new DataHandler(new URLDataSource(fileUrl) {
 	@Override
 	public String getContentType() {
 		return "application/octet-stream"
